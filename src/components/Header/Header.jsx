@@ -27,7 +27,7 @@ const Header = () => {
                 <div className="header__sub-nav">
                     <div className="header__wrapper">
                         <div className="header__wrapper--inner">
-                            <div className="header__container">
+                            <div className="header__container header__container--games">
                                 <img className="header__icon header__icon--games" src={gamesIcon} alt="ny times logo"/> 
                             </div>
                             <p className="header__text">check out games</p>
