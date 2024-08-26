@@ -47,12 +47,9 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="header__nav">
-        <button className="header__button header__button--menu">
-          <div className="horizontal-lines"></div>
-          <div className="horizontal-lines"></div>
-          <div className="horizontal-lines"></div>
+        <button className="header__button header__button--dp-none">
+          <img className="header__user-icon" src={userIcon} alt="ny times logo"/> 
         </button>
-
         <img className="header__logo" src={logo} alt="ny times logo" />
 
         <button className="header__button header__button--user">

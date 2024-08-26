@@ -21,18 +21,7 @@ header {
     padding: 0rem; 
     border-radius: 50%;
     border: none;
-    
-
-    &--menu {
-        height: 0.8rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background-color: transparent;
-        border: none;
-        visibility: hidden
-    }
-
+ 
     &--user {
         display: flex;
         align-items: center;
@@ -42,6 +31,11 @@ header {
         max-width: 1.5rem;
         max-height: 1.5rem;
         background-color: transparent;
+    }
+
+    &--dp-none {
+        height: 0.8rem;
+        visibility:hidden;
     }
 }
 
@@ -60,7 +54,7 @@ header {
     height: fit-content;
     border-top: 1px solid  rgb(198, 198, 198);
     overflow-x: auto;
-    padding: 1rem 1rem 0rem 1rem;
+    padding: 1rem;
 }
 
 .header__sub-nav::-webkit-scrollbar {

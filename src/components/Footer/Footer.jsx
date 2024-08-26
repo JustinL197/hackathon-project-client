@@ -10,26 +10,28 @@ const Footer = () => {
 
         return (
             <footer className="footer">
-                 <button className="footer__button">
-                    <img className="footer__icon" src={nytIcon} alt="ny times icon"/>
-                    <p className="footer__text">Today</p>
-                </button>
-                <button className="footer__button"> 
-                    <img className="footer__icon" src={audioIcon} alt="audio icon"/> 
-                    <p className="footer__text">Listen</p>
-                </button>
-                <button className="footer__button"> 
-                    <img className="footer__icon--play" src={playIcon} alt="play icon"/> 
-                    <p className="footer__text">Play</p>
-                </button>
-                <button className="footer__button"> 
-                    <img className="footer__icon" src={sectionsIcon} alt="sections icon"/> 
-                    <p className="footer__text">Sections</p>
-                </button>
-                <button className="footer__button"> 
-                    <img className="footer__icon" src={userIcon} alt="user icon"/> 
-                    <p className="footer__text">You</p>
-                </button>
+                <nav className="footer-nav">
+                    <button className="footer-nav__button">
+                        <img className="footer-nav__icon" src={nytIcon} alt="ny times icon"/>
+                        <p className="footer-nav__text">Today</p>
+                    </button>
+                    <button className="footer-nav__button"> 
+                        <img className="footer-nav__icon" src={audioIcon} alt="audio icon"/> 
+                        <p className="footer-nav__text">Listen</p>
+                    </button>
+                    <button className="footer-nav__button"> 
+                        <img className="footer-nav__icon--play" src={playIcon} alt="play icon"/> 
+                        <p className="footer-nav__text">Play</p>
+                    </button>
+                    <button className="footer-nav__button"> 
+                        <img className="footer-nav__icon" src={sectionsIcon} alt="sections icon"/> 
+                        <p className="footer-nav__text">Sections</p>
+                    </button>
+                    <button className="footer-nav__button"> 
+                        <img className="footer-nav__icon" src={userIcon} alt="user icon"/> 
+                        <p className="footer-nav__text">You</p>
+                    </button>
+                </nav>
             </footer>
         );
     };
