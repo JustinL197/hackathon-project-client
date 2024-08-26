@@ -1,0 +1,23 @@
+.footer {
+    border-top: 1px solid  rgb(198, 198, 198);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+    &__button {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+    }
+
+    &__icon {
+        &--play {
+            width: 2rem;
+            filter: grayscale(100%)
+        }
+    }
+
+    &__text {
+        font-size: .65rem;
+    }
+}

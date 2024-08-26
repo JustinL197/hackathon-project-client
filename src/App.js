@@ -3,10 +3,13 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RecipeTimesPage from "./pages/RecipeTimesPage/RecipeTimesPage";
 import HomePage from "./pages/HomePage/HomePage";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <div className="app">
+      <Header />
       <BrowserRouter>
         <main className="app__main-content">
           <Routes>
@@ -16,6 +19,7 @@ function App() {
           </Routes>
         </main>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }
