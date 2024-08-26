@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './Modal.scss';
 
-const Modal = ({ isOpen, onClose, children }) => {
+const Modal = ({ isOpen, onClose, children, contentType, onProgressComplete }) => { 
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden'; // Prevent background scroll
+      document.body.style.overflow = 'hidden';
 
       let start = 0;
       const interval = setInterval(() => {
@@ -14,8 +14,9 @@ const Modal = ({ isOpen, onClose, children }) => {
         setProgress(start);
         if (start >= 100) {
           clearInterval(interval);
+          onProgressComplete();
         }
-      }, 80); 
+      }, 70); 
 
       return () => {
         clearInterval(interval);
@@ -23,19 +24,31 @@ const Modal = ({ isOpen, onClose, children }) => {
         setProgress(0); 
       };
     }
-  }, [isOpen]);
+  }, [isOpen, onProgressComplete]);
+
+  useEffect(() => {
+    setProgress(0);
+  }, [contentType]);
 
   if (!isOpen) return null;
 
+  // Determine modal classes based on content type
+  const modalClass = contentType === 'recipe' || contentType === 'recipePartTwo' 
+    ? 'modal-content modal-content--recipe' 
+    : 'modal-content';
+  
+  const progressBarClass = contentType === 'recipe' || contentType === 'recipePartTwo' 
+    ? 'progress-bar progress-bar--recipe' 
+    : 'progress-bar';
+
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <div className={modalClass} onClick={(e) => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose}>
           &times;
         </button>
 
-        {/* Progress Bar */}
-        <div className="progress-bar">
+        <div className={progressBarClass}>
           <div className="progress-bar__fill" style={{ width: `${progress}%` }} />
         </div>
 
