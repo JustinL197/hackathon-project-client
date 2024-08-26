@@ -8,20 +8,19 @@ const Modal = ({ isOpen, onClose, children }) => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'; // Prevent background scroll
 
-      // Start the timer for the progress bar when the modal is open
       let start = 0;
       const interval = setInterval(() => {
-        start += 100 / (10 * 10); // 10 seconds total, updating every 0.1 second
+        start += 100 / (10 * 10); 
         setProgress(start);
         if (start >= 100) {
           clearInterval(interval);
         }
-      }, 100); // Update every 100ms (0.1 second)
+      }, 80); 
 
       return () => {
         clearInterval(interval);
-        document.body.style.overflow = 'auto'; // Enable scroll when modal closes
-        setProgress(0); // Reset progress when modal closes
+        document.body.style.overflow = 'auto'; 
+        setProgress(0); 
       };
     }
   }, [isOpen]);

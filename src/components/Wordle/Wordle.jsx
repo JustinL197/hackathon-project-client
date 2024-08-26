@@ -22,17 +22,15 @@ const Wordle = () => {
     Array.from({ length: maxAttempts }, () => Array(wordLength).fill(false)) // Initially, all letters are hidden
   );
 
-  // Function to calculate letter colors based on attempts and target word
   const calculateColors = (word, target) => {
     const result = ['', '', '', '', ''];
     const targetLetterCount = {};
 
-    // Count occurrences of each letter in the target word
+
     for (let letter of target) {
       targetLetterCount[letter] = (targetLetterCount[letter] || 0) + 1;
     }
 
-    // Determine color for each letter in the attempt
     for (let i = 0; i < word.length; i++) {
       if (word[i] === target[i]) {
         result[i] = 'green'; // Correct letter in the correct position
@@ -54,7 +52,7 @@ const Wordle = () => {
     return result;
   };
 
-  // Effect to handle the reveal of letters and colors separately
+  
   useEffect(() => {
     if (currentPhase < attempts.length) {
       const revealTimer = setTimeout(() => {
@@ -76,10 +74,10 @@ const Wordle = () => {
           setAnimateClass(newAnimations);
 
           setCurrentPhase((prevPhase) => prevPhase + 1);
-        }, 1000); // Delay before showing colors
+        }, 1000); 
 
         return () => clearTimeout(colorTimer);
-      }, 1000); // Delay to show letters first
+      }, 1000); 
 
       return () => clearTimeout(revealTimer);
     }
@@ -95,7 +93,7 @@ const Wordle = () => {
               key={colIndex}
               className={`wordle-letter ${colors[rowIndex][colIndex]} ${
                 animateClass[rowIndex][colIndex]
-              } ${revealedLetters[rowIndex][colIndex] ? 'visible' : 'default'}`} // Ensure all squares are rendered
+              } ${revealedLetters[rowIndex][colIndex] ? 'visible' : 'default'}`} 
             >
               {revealedLetters[rowIndex][colIndex] ? attempts[rowIndex][colIndex] : ''}
             </div>

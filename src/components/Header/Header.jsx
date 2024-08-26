@@ -5,8 +5,8 @@ import userIcon from "../../assets/icons/youicon.svg";
 import gamesIcon from "../../assets/icons/wordle.svg fillwordle icon.png";
 import foodIcon from "../../assets/images/food recipe image.png";
 import podcastIcon from "../../assets/images/biden.png";
-import Modal from '../../components/Modal/Modal'; // Adjust the path as needed
-import Wordle from '../../components/Wordle/Wordle'; // Adjust the path as needed
+import Modal from '../../components/Modal/Modal'; 
+import Wordle from '../../components/Wordle/Wordle';
 
 const Header = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -38,13 +38,12 @@ const Header = () => {
         <div className="header__wrapper">
           <div className="header__wrapper--inner">
             <div className="header__container">
-              {/* Add onClick handler to the games icon */}
               <img 
                 className="header__icon header__icon--games" 
                 src={gamesIcon} 
                 alt="games icon"
-                onClick={handleOpenModal} // Open modal on click
-                style={{ cursor: 'pointer' }} // Change cursor to pointer on hover
+                onClick={handleOpenModal} 
+                style={{ cursor: 'pointer' }} 
               />
             </div>
             <p className="header__text">Check out games</p>
@@ -66,10 +65,9 @@ const Header = () => {
             <p className="header__text">Have a listen</p>
           </div>
         </div>
-        {/* Remove repeated content if not needed */}
+        
       </div>
       
-      {/* Modal component with Wordle as children */}
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
         <Wordle />
       </Modal>
