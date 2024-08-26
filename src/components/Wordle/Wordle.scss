@@ -1,0 +1,77 @@
+.wordle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .wordle-row {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .wordle-letter {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ddd;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.5s ease, color 0.5s ease, opacity 0.5s ease;
+    border-radius: 4px;
+    background-color: white; /* Default background for empty squares */
+    color: transparent; /* Default text color hidden */
+    opacity: 1; /* All squares are visible */
+  }
+  
+  .wordle-letter.default {
+    background-color: white; /* Keep default background for empty squares */
+    border-color: #ddd;
+    color: transparent; /* Hide letters by default */
+  }
+  
+  .wordle-letter.visible {
+    color: black; /* Show letters when revealed */
+  }
+  
+  .wordle-letter.green {
+    background-color: #6aaa64; /* Correct position */
+    color: white;
+    border-color: #6aaa64;
+  }
+  
+  .wordle-letter.yellow {
+    background-color: #c9b458; /* Correct letter but wrong position */
+    color: white;
+    border-color: #c9b458;
+  }
+  
+  .wordle-letter.grey {
+    background-color: #787c7e; /* Incorrect letter */
+    color: white;
+    border-color: #787c7e;
+  }
+  
+  .wordle-letter.animate {
+    animation: flipIn 0.5s ease forwards;
+  }
+  
+  @keyframes flipIn {
+    0% {
+      transform: rotateX(90deg);
+    }
+    100% {
+      transform: rotateX(0deg);
+    }
+  }
+
+.play-button{
+    width: 360px;
+    height: 64px;
+    border-radius: 30px;
+}
