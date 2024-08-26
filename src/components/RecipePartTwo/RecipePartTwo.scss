@@ -1,5 +1,7 @@
 .recipe {
-    margin-top: 6.875rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
   
     &__title {
       font-family: Georgia, serif;
@@ -123,92 +125,16 @@
     &__rating-count {
       margin-left: 0.3125rem;
     }
-  
-    &__actions {
-      display: flex;
-      align-items: center;
-      margin-top: 1.75rem;
-    }
-  
-    &__save-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 5.86625rem;
-      height: 2.5rem;
-      border-radius: 1.25rem;
-      border: 1px solid transparent;
-      background-color: #df321b;
-      color: white;
-      font-family: Arial, sans-serif;
-      font-weight: 700;
-      font-size: 0.90625rem;
-      line-height: 1rem;
-      letter-spacing: 0.02rem;
-      cursor: pointer;
-  
-      img {
-        margin-right: 0.3125rem;
-        filter: invert(100%);
-      }
-    }
-  
-    &__share-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 2.5rem;
-      height: 2.5rem;
-      margin-left: 1.5rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-  
-    &__ingredients {
-      margin-top: 2.5rem;
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
-  
-    &__ingredients-list,
-    &__preparation-step__text,
-    &__yield,
-    &__preparation-step {
-      margin-top: 0.625rem;
-      margin-bottom: 1.5rem;
-      font-family: Inter, sans-serif;
-      font-weight: 400;
-      font-size: 1rem;
-      line-height: 1.875rem;
-      letter-spacing: 0.03125rem;
-      list-style: none;
-      padding-left: 0;
-      margin-left: 0;
-    }
-  
-    &__preparation {
-      margin-left: 1rem;
-      margin-right: 1rem;
-  
-      &-title {
-        font-family: Georgia, serif;
-        font-weight: 700;
-        font-size: 1.3125rem;
-        line-height: 1.875rem;
-        letter-spacing: 0.03125rem;
-        margin-top: 3rem;
-        margin-bottom: 2.375rem;
-      }
-  
-      &-step {
-        font-weight: 700;
-        margin-bottom: 0;
-      }
-  
-      &-step__text {
-        margin-top: 0;
-      }
-    }
-  }
-  
+}
+
+.recipe-button{
+    align-self: center;
+    width: 320px;
+    height: 64px;
+    border-radius: 30px;
+    margin-top: 32px;
+    background-color: white;
+    font-size: 28px;
+    border: 1px solid rgb(111, 111, 111);
+    margin-bottom: 30px;
+}

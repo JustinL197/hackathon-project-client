@@ -20,6 +20,6 @@ function HomePage() {
       </article>
     </section>
   );
-}
+};
 
 export default HomePage;
