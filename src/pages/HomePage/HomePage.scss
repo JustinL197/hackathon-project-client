@@ -1,7 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
 .homepage {
     padding: 1rem;
     height: 35.8rem;
     overflow-y: auto;
+
+    &__title {
+        font-style: italic;
+    }
+
+    &__image {
+        width: 100%;
+    }
 }
 
 .homepage::-webkit-scrollbar {

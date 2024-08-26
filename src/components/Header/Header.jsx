@@ -6,20 +6,14 @@ import gamesIcon from "../../assets/icons/wordle.svg fillwordle icon.png"
 import foodIcon from "../../assets/images/food recipe image.png"
 import podcastIcon from "../../assets/images/biden.png"
 
-
 const Header = () => {
-
         return (
             <header className="header">
                 <nav className="header__nav">
-                    <button className="header__button header__button--menu">
-                        <div className="horizontal-lines"></div>
-                        <div className="horizontal-lines"></div>
-                        <div className="horizontal-lines"></div>
+                    <button className="header__button header__button--dp-none">
+                         <img className="header__user-icon" src={userIcon} alt="ny times logo"/> 
                     </button>
-
                     <img className="header__logo" src={logo} alt="ny times logo"/>
-
                     <button className="header__button header__button--user">
                          <img className="header__user-icon" src={userIcon} alt="ny times logo"/> 
                     </button>
@@ -30,7 +24,7 @@ const Header = () => {
                             <div className="header__container header__container--games">
                                 <img className="header__icon header__icon--games" src={gamesIcon} alt="ny times logo"/> 
                             </div>
-                            <p className="header__text">check out games</p>
+                            <p className="header__text">Check out games</p>
                         </div>
                     </div>
                     <div className="header__wrapper">
