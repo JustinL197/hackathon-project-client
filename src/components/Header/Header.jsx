@@ -1,13 +1,35 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Header.scss";
 import logo from "../../assets/logo/The_New_York_Times_Logo 1.png"
 import userIcon from "../../assets/icons/youicon.svg"
 import gamesIcon from "../../assets/icons/wordle.svg fillwordle icon.png"
 import foodIcon from "../../assets/images/food recipe image.png"
 import podcastIcon from "../../assets/images/biden.png"
+import Modal from '../../components/Modal/Modal'; // Adjust the path as needed
+import Wordle from '../../components/Wordle/Wordle'; // Adjust the path as needed
 
 
 const Header = () => {
+
+        const [isModalOpen, setModalOpen] = useState(false);
+
+        const handleOpenModal = () => {
+        setModalOpen(true);
+        };
+    
+        const handleCloseModal = () => {
+        setModalOpen(false);
+        };
+
+        <button onClick={handleOpenModal} className="home-page__wordle-button">
+        Play Wordle Story
+        </button>
+
+        {/* Modal component with Wordle as children */}
+        <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+            <Wordle />
+        </Modal>
+
 
         return (
             <header className="header">
