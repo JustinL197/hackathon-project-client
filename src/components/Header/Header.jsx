@@ -5,6 +5,7 @@ import userIcon from "../../assets/icons/youicon.svg";
 import gamesIcon from "../../assets/icons/wordle.svg fillwordle icon.png";
 import foodIcon from "../../assets/images/food recipe image.png";
 import podcastIcon from "../../assets/images/biden.png";
+import nytIcon from "../../assets/icons/nyt icon.svg"
 import Modal from '../../components/Modal/Modal';
 import Wordle from '../../components/Wordle/Wordle'; 
 import Recipe from '../../components/Recipe/Recipe'; 
@@ -97,6 +98,20 @@ const Header = () => {
               />
             </div>
             <p className="header__text">Have a listen</p>
+          </div>
+        </div>
+        <div className="header__wrapper">
+          <div className="header__wrapper--inner">
+            <div className="header__container">
+              <img 
+                className="header__icon header__icon--nyt" 
+                src={nytIcon} 
+                alt="podcast icon"
+                onClick={handleOpenRecipePartTwoModal} 
+                style={{ cursor: 'pointer' }}
+              />
+            </div>
+            <p className="header__text">Whats new</p>
           </div>
         </div>
       </div>
