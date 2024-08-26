@@ -5,18 +5,43 @@ import userIcon from "../../assets/icons/youicon.svg";
 import gamesIcon from "../../assets/icons/wordle.svg fillwordle icon.png";
 import foodIcon from "../../assets/images/food recipe image.png";
 import podcastIcon from "../../assets/images/biden.png";
-import Modal from '../../components/Modal/Modal'; 
-import Wordle from '../../components/Wordle/Wordle';
+import Modal from '../../components/Modal/Modal';
+import Wordle from '../../components/Wordle/Wordle'; 
+import Recipe from '../../components/Recipe/Recipe'; 
+import RecipePartTwo from '../../components/RecipePartTwo/RecipePartTwo'; 
 
 const Header = () => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState(null);
 
-  const handleOpenModal = () => {
+  const handleOpenWordleModal = () => {
     setModalOpen(true);
+    setModalContent('wordle'); 
+  };
+
+  const handleOpenRecipeModal = () => {
+    setModalOpen(true);
+    setModalContent('recipe'); 
+  };
+
+  const handleOpenRecipePartTwoModal = () => {
+    setModalOpen(true);
+    setModalContent('recipePartTwo');
   };
 
   const handleCloseModal = () => {
     setModalOpen(false);
+    setModalContent(null);
+  };
+
+  const handleProgressComplete = () => {
+    if (modalContent === 'wordle') {
+      setModalContent('recipe');
+    } else if (modalContent === 'recipe') {
+      setModalContent('recipePartTwo');
+    } else if (modalContent === 'recipePartTwo') {
+      handleCloseModal();
+    }
   };
 
   return (
@@ -42,8 +67,8 @@ const Header = () => {
                 className="header__icon header__icon--games" 
                 src={gamesIcon} 
                 alt="games icon"
-                onClick={handleOpenModal} 
-                style={{ cursor: 'pointer' }} 
+                onClick={handleOpenWordleModal} 
+                style={{ cursor: 'pointer' }}
               />
             </div>
             <p className="header__text">Check out games</p>
@@ -52,7 +77,13 @@ const Header = () => {
         <div className="header__wrapper">
           <div className="header__wrapper--inner">
             <div className="header__container">
-              <img className="header__icon header__icon--food" src={foodIcon} alt="food icon" />
+              <img 
+                className="header__icon header__icon--food" 
+                src={foodIcon} 
+                alt="food icon"
+                onClick={handleOpenRecipeModal} 
+                style={{ cursor: 'pointer' }}
+              />
             </div>
             <p className="header__text">Try a new recipe</p>
           </div>
@@ -60,16 +91,29 @@ const Header = () => {
         <div className="header__wrapper">
           <div className="header__wrapper--inner">
             <div className="header__container">
-              <img className="header__icon header__icon--podcast" src={podcastIcon} alt="podcast icon" />
+              <img 
+                className="header__icon header__icon--podcast" 
+                src={podcastIcon} 
+                alt="podcast icon"
+                onClick={handleOpenRecipePartTwoModal} 
+                style={{ cursor: 'pointer' }}
+              />
             </div>
             <p className="header__text">Have a listen</p>
           </div>
         </div>
-        
       </div>
       
-      <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-        <Wordle />
+      <Modal 
+        isOpen={isModalOpen} 
+        onClose={handleCloseModal} 
+        contentType={modalContent}
+        onProgressComplete={handleProgressComplete} 
+      >
+
+        {modalContent === 'wordle' && <Wordle />}
+        {modalContent === 'recipe' && <Recipe />}
+        {modalContent === 'recipePartTwo' && <RecipePartTwo />}
       </Modal>
     </header>
   );

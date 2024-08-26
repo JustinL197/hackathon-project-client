@@ -4,22 +4,22 @@ import './Wordle.scss';
 const Wordle = () => {
   const targetWord = 'GAMES';
   const attempts = ['SPEED', 'TIMES', 'GAMES'];
-  const maxAttempts = 6; // Maximum number of attempts
+  const maxAttempts = 6;
   const wordLength = targetWord.length;
 
   const [currentPhase, setCurrentPhase] = useState(0);
 
-  // Initialize states for colors, animations, and visibility
+
   const [colors, setColors] = useState(
-    Array.from({ length: maxAttempts }, () => Array(wordLength).fill('')) // Initially, no color
+    Array.from({ length: maxAttempts }, () => Array(wordLength).fill(''))
   );
 
   const [animateClass, setAnimateClass] = useState(
-    Array.from({ length: maxAttempts }, () => Array(wordLength).fill('')) // Initially, no animation
+    Array.from({ length: maxAttempts }, () => Array(wordLength).fill(''))
   );
 
   const [revealedLetters, setRevealedLetters] = useState(
-    Array.from({ length: maxAttempts }, () => Array(wordLength).fill(false)) // Initially, all letters are hidden
+    Array.from({ length: maxAttempts }, () => Array(wordLength).fill(false))
   );
 
   const calculateColors = (word, target) => {
@@ -33,7 +33,7 @@ const Wordle = () => {
 
     for (let i = 0; i < word.length; i++) {
       if (word[i] === target[i]) {
-        result[i] = 'green'; // Correct letter in the correct position
+        result[i] = 'green';
         targetLetterCount[word[i]]--;
       }
     }
@@ -41,10 +41,10 @@ const Wordle = () => {
     for (let i = 0; i < word.length; i++) {
       if (result[i] !== 'green') {
         if (target.includes(word[i]) && targetLetterCount[word[i]] > 0) {
-          result[i] = 'yellow'; // Correct letter in the wrong position
+          result[i] = 'yellow'; 
           targetLetterCount[word[i]]--;
         } else {
-          result[i] = 'grey'; // Incorrect letter
+          result[i] = 'grey';
         }
       }
     }
@@ -57,7 +57,7 @@ const Wordle = () => {
     if (currentPhase < attempts.length) {
       const revealTimer = setTimeout(() => {
         const newRevealedLetters = [...revealedLetters];
-        newRevealedLetters[currentPhase] = Array(wordLength).fill(true); // Reveal letters for the current row
+        newRevealedLetters[currentPhase] = Array(wordLength).fill(true); 
         setRevealedLetters(newRevealedLetters);
 
         const colorTimer = setTimeout(() => {
