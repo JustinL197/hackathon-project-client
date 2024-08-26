@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: fit-content;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header__button {
+    cursor: pointer;
+    padding: 0rem; 
+    border-radius: 50%;
+    border: none;
+    
+
+    &--menu {
+        height: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: transparent;
+        border: none;
+        visibility: hidden
+    }
+
+    &--user {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        max-width: 1.5rem;
+        max-height: 1.5rem;
+        background-color: transparent;
+    }
+}
+
+.header__logo {
+    width: 50%;
+}
+
+.header__user-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.header__sub-nav {
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    border-top: 1px solid  rgb(198, 198, 198);
+    overflow-x: auto;
+    padding: 1rem 1rem 0rem 1rem;
+}
+
+.header__sub-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.header__wrapper--inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 7rem;
+    height: 8rem;
+}
+
+.header__container {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    box-shadow: 0px 3px 5px rgba(94, 94, 94, 0.754);
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0rem;
+    overflow: hidden;
+    &:hover {
+        transform: scale(1.1) 
+    }
+}
+
+.header__icon {
+    &--games {
+        width: 2rem;
+    }
+
+    &--food {
+        margin-left: 1.25rem;
+        width: 7rem;
+    }
+
+    &--podcast {
+        margin-top: 1rem;
+        width: 5rem;
+    }
+    
+}
+
+.header__text {
+    text-align: center;
+    width: 70%;
+    height: 2.75rem;
+    margin: 0rem;
+    
+}

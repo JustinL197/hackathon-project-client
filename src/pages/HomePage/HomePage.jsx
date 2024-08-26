@@ -1,34 +1,26 @@
-import React, { useState } from 'react';
-import Modal from '../../components/Modal/Modal'; // Adjust the path as needed
-import Wordle from '../../components/Wordle/Wordle'; // Adjust the path as needed
+import React from "react";
+import "./HomePage.scss";
 
-const HomePage = () => {
-  const [isModalOpen, setModalOpen] = useState(false);
-
-  const handleOpenModal = () => {
-    setModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setModalOpen(false);
-  };
-
+function HomePage() {
   return (
-    <div className="home-page">
-      <header className="home-page__header">
-        <h1>Welcome to HomePage</h1>
-        {/* Other homepage content */}
-      </header>
+    <div className="homepage">
+      <h1>IM THE HOME PAGE</h1>
+      <h1>IM THE HOME PAGE</h1>
+      <h1>IM THE HOME PAGE</h1>
+      <h1>IM THE HOME PAGE</h1>
+      <h1>IM THE HOME PAGE</h1>
+      <h1>IM THE HOME PAGE</h1>
+      <h1>IM THE HOME PAGE</h1>
 
-      <button onClick={handleOpenModal} className="home-page__wordle-button">
-        Play Wordle Story
-      </button>
-
-      {/* Modal component with Wordle as children */}
-      <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-        <Wordle />
-      </Modal>
+      <h1>IM THE HOME PAGE</h1>
+      <h1>IM THE HOME PAGE</h1>
+      <h1>IM THE HOME PAGE</h1>
+      <h1>IM THE HOME PAGE</h1>
+      <h1>IM THE HOME PAGE</h1>
+      <h1>IM THE HOME PAGE</h1>
+      
     </div>
+    
   );
 };
 
