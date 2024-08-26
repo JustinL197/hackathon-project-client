@@ -1,10 +1,12 @@
 .wordle-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center; /* Center content horizontally */
     width: 100%;
-    gap: 10px;
+    height: 100%; /* Stretch to full height of the modal content */
+    gap: 20px; /* Adjust spacing between rows */
+
   }
   
   .wordle-row {
@@ -12,9 +14,17 @@
     gap: 5px;
   }
   
+  .wordle-header{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding-top: 16px;
+  }
   .wordle-letter {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,35 +34,35 @@
     text-transform: uppercase;
     transition: background-color 0.5s ease, color 0.5s ease, opacity 0.5s ease;
     border-radius: 4px;
-    background-color: white; /* Default background for empty squares */
-    color: transparent; /* Default text color hidden */
-    opacity: 1; /* All squares are visible */
+    background-color: white; 
+    color: transparent; 
+    opacity: 1; 
   }
   
   .wordle-letter.default {
-    background-color: white; /* Keep default background for empty squares */
+    background-color: white; 
     border-color: #ddd;
-    color: transparent; /* Hide letters by default */
+    color: transparent; 
   }
   
   .wordle-letter.visible {
-    color: black; /* Show letters when revealed */
+    color: black; 
   }
   
   .wordle-letter.green {
-    background-color: #6aaa64; /* Correct position */
+    background-color: #6aaa64; 
     color: white;
     border-color: #6aaa64;
   }
   
   .wordle-letter.yellow {
-    background-color: #c9b458; /* Correct letter but wrong position */
+    background-color: #c9b458; 
     color: white;
     border-color: #c9b458;
   }
   
   .wordle-letter.grey {
-    background-color: #787c7e; /* Incorrect letter */
+    background-color: #787c7e; 
     color: white;
     border-color: #787c7e;
   }
@@ -71,7 +81,11 @@
   }
 
 .play-button{
-    width: 360px;
+    width: 320px;
     height: 64px;
     border-radius: 30px;
+    margin-top: 72px;
+    background-color: white;
+    font-size: 28px;
+    border: 1px solid rgb(111, 111, 111);
 }

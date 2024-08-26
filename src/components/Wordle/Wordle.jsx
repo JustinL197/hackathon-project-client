@@ -87,7 +87,7 @@ const Wordle = () => {
 
   return (
     <div className="wordle-container">
-      <div>Wordle</div>
+      <div className="wordle-header">Wordle</div>
       {Array.from({ length: maxAttempts }).map((_, rowIndex) => (
         <div key={rowIndex} className="wordle-row">
           {Array.from({ length: wordLength }).map((_, colIndex) => (
