@@ -1,0 +1,140 @@
+.recipe {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+  
+    &__title {
+      font-family: Georgia, serif;
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 2.8125rem;
+      letter-spacing: 0.03125rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    &__author {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-bottom: 0.25rem;
+    }
+  
+    &__ingredients-title {
+      font-family: Georgia, serif;
+      font-weight: 700;
+      font-size: 1.3125rem;
+      line-height: 1.875rem;
+      letter-spacing: 0.03125rem;
+      margin-bottom: 1.75rem;
+    }
+  
+    &__author,
+    &__detail-title {
+      font-family: Inter, sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.875rem;
+      letter-spacing: 0.03125rem;
+    }
+  
+    &__image {
+      width: 100%;
+      height: auto;
+      margin: 1.25rem 0;
+    }
+  
+    &__details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  
+    &__detail {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      margin-right: 1.25rem;
+  
+      &-title {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+    }
+  
+    &__detail-info {
+      font-family: Inter, sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.875rem;
+      letter-spacing: 0.03125rem;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      margin-left: 0.625rem;
+    }
+  
+    .detail-link {
+      margin-left: 2.9375rem;
+      color: black;
+      text-decoration: none;
+  
+      a {
+        color: black;
+        text-decoration: underline;
+      }
+  
+      a:visited {
+        color: black;
+        text-decoration: none;
+      }
+  
+      a:hover {
+        color: black;
+        text-decoration: none;
+      }
+  
+      a:active {
+        color: black;
+      }
+    }
+  
+    &__rating {
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+      padding-bottom: 0.5rem;
+      margin-left: 2.75rem;
+    }
+  
+    &__rating-number {
+      margin-right: 0.3125rem;
+    }
+  
+    &__star-icon {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.3125rem;
+  
+      &--inactive {
+        filter: invert(80%);
+      }
+    }
+  
+    &__rating-count {
+      margin-left: 0.3125rem;
+    }
+}
+
+.recipe-button{
+    align-self: center;
+    width: 320px;
+    height: 64px;
+    border-radius: 30px;
+    margin-top: 32px;
+    background-color: white;
+    font-size: 28px;
+    border: 1px solid rgb(111, 111, 111);
+    margin-bottom: 30px;
+}
