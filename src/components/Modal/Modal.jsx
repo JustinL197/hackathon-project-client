@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Modal.scss';
 
-const Modal = ({ isOpen, onClose, children, contentType, onProgressComplete }) => { 
+const Modal = ({ isOpen, onClose, children, contentType, onProgressComplete }) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -14,36 +14,44 @@ const Modal = ({ isOpen, onClose, children, contentType, onProgressComplete }) =
         setProgress(start);
         if (start >= 100) {
           clearInterval(interval);
-          onProgressComplete();
+          onProgressComplete(); 
         }
-      }, 70); 
+      }, 80);
 
       return () => {
         clearInterval(interval);
-        document.body.style.overflow = 'auto'; 
-        setProgress(0); 
+        document.body.style.overflow = 'auto';
+        setProgress(0);
       };
     }
   }, [isOpen, onProgressComplete]);
 
+ 
   useEffect(() => {
-    setProgress(0);
+    setProgress(0); 
   }, [contentType]);
 
   if (!isOpen) return null;
 
   // Determine modal classes based on content type
-  const modalClass = contentType === 'recipe' || contentType === 'recipePartTwo' 
-    ? 'modal-content modal-content--recipe' 
+  const modalClass = contentType === 'recipe' || contentType === 'recipePartTwo'
+    ? 'modal-content modal-content--recipe'
     : 'modal-content';
-  
-  const progressBarClass = contentType === 'recipe' || contentType === 'recipePartTwo' 
-    ? 'progress-bar progress-bar--recipe' 
+
+  const progressBarClass = contentType === 'recipe' || contentType === 'recipePartTwo'
+    ? 'progress-bar progress-bar--recipe'
     : 'progress-bar';
+
+  const handleContentClick = () => {
+    onProgressComplete();
+  };
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className={modalClass} onClick={(e) => e.stopPropagation()}>
+      <div className={modalClass} onClick={(e) => {
+        e.stopPropagation(); 
+        handleContentClick(); 
+      }}>
         <button className="modal-close" onClick={onClose}>
           &times;
         </button>
@@ -52,6 +60,7 @@ const Modal = ({ isOpen, onClose, children, contentType, onProgressComplete }) =
           <div className="progress-bar__fill" style={{ width: `${progress}%` }} />
         </div>
 
+        {/* Render children directly without cloning, as cloning caused issues */}
         {children}
       </div>
     </div>

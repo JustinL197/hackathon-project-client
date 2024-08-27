@@ -93,7 +93,6 @@ const Header = () => {
                 className="header__icon header__icon--podcast" 
                 src={podcastIcon} 
                 alt="podcast icon"
-                onClick={handleOpenRecipePartTwoModal} 
                 style={{ cursor: 'pointer' }}
               />
             </div>
@@ -107,7 +106,6 @@ const Header = () => {
                 className="header__icon header__icon--nyt" 
                 src={nytIcon} 
                 alt="podcast icon"
-                onClick={handleOpenRecipePartTwoModal} 
                 style={{ cursor: 'pointer' }}
               />
             </div>

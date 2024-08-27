@@ -1,9 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; 
 import './RecipePartTwo.scss'; 
 import tofuRiceImage from '../../assets/images/food recipe image.png';
 import starIcon from '../../assets/icons/star-icon.svg';
 
 const RecipePartTwo = () => {
+  const navigate = useNavigate(); 
+  const handleSeeRecipeClick = () => {
+    navigate('/recipe-times'); 
+  };
+
   return (
     <div className="recipe">
         <h1 className="recipe__title">Crispy Coconut Rice With Tofu</h1>
@@ -28,8 +34,9 @@ const RecipePartTwo = () => {
                 </div>
             </div>
         </div>
-        <button className="recipe-button">
-        See Recipe
+
+        <button className="recipe-button" onClick={handleSeeRecipeClick}>
+          See Recipe
         </button>
     </div>
   );
