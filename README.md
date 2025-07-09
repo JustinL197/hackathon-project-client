@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# NYT Interactive Stories (Hackathon Project)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was developed during a hackathon in collaboration with The New York Times. The challenge was:
 
-## Available Scripts
+> **How can we increase user engagement on specific sections of the NYT website?**
 
-In the project directory, you can run:
+Our team focused on the **Games** and **Cooking** categories. We built a feature inspired by Instagram Stories, allowing users to tap on interactive story tiles that open modals containing games or trending content.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🎯 Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Interactive Stories UI – horizontal scroll of “story” icons
+- Wordle game playable inside a modal
+- Trending recipes display for cooking enthusiasts
+- Mobile-first prototype (not fully responsive for desktop)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack
 
-### `npm run build`
+- React.js
+- HTML5
+- CSS3
+- Create React App
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 👨‍💻 My Role & Contributions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I contributed as part of the development team and was responsible for:
 
-### `npm run eject`
+- Building the **Wordle game** logic and UI in React
+- Implementing UI components and styling adjustments
+- Collaborating with:
+  - The Data Team (for engagement metrics and content)
+  - The UI/UX Design Team (to implement the interactive stories concept)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ⚙️ Installation & Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Prerequisites
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Node.js
+- npm
 
-## Learn More
+### Steps
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone the repository:  
+    `git clone https://github.com/your-username/nyt-interactive-stories-client.git`  
+    `cd nyt-interactive-stories-client`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Install dependencies:  
+    `npm install`
 
-### Code Splitting
+3. Start the development server:  
+    `npm start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Open your browser and go to:  
+    [http://localhost:3000](http://localhost:3000)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## ⚠️ Limitations
 
-### Making a Progressive Web App
+- The app was designed for mobile view only due to hackathon time constraints and is not fully responsive on desktop.
+- Some features remain prototypes and are not production-ready.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📚 What I Learned
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Building interactive games like Wordle in React
+- Designing engagement-focused UI inspired by social media
+- Collaborating under tight deadlines with multidisciplinary teams
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is for demonstration purposes only and is not intended for commercial use.
